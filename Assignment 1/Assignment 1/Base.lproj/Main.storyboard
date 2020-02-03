@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bZj-S0-YDr">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -53,9 +53,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nB4-D3-V4A">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7p-av-q5e">
                                 <rect key="frame" x="259" y="544" width="30" height="30"/>
                                 <state key="normal" title="next"/>
@@ -70,22 +67,35 @@
                                     <action selector="prevButton" destination="jYk-0V-ibm" eventType="touchUpInside" id="QF7-fh-or3"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nB4-D3-V4A">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcg-Jr-4Q0">
+                                <rect key="frame" x="87" y="321" width="240" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="nB4-D3-V4A" firstAttribute="centerY" secondItem="Z5l-qR-jgi" secondAttribute="centerY" id="7Fh-QZ-yHy"/>
                             <constraint firstItem="J7p-av-q5e" firstAttribute="baseline" secondItem="3Jc-Co-Y2p" secondAttribute="baseline" id="Amd-2R-aME"/>
                             <constraint firstItem="3Jc-Co-Y2p" firstAttribute="leading" secondItem="i6W-fr-Zc0" secondAttribute="leading" constant="129" id="Itc-0l-72q"/>
-                            <constraint firstItem="nB4-D3-V4A" firstAttribute="centerX" secondItem="Z5l-qR-jgi" secondAttribute="centerX" id="N3R-sc-Zqh"/>
+                            <constraint firstItem="nB4-D3-V4A" firstAttribute="centerX" secondItem="Z5l-qR-jgi" secondAttribute="centerX" id="MOK-Zb-EzA"/>
+                            <constraint firstItem="pcg-Jr-4Q0" firstAttribute="top" secondItem="i6W-fr-Zc0" secondAttribute="top" constant="233" id="PNe-VX-cQ5"/>
+                            <constraint firstItem="nB4-D3-V4A" firstAttribute="centerY" secondItem="Z5l-qR-jgi" secondAttribute="centerY" id="QNW-Wv-PAN"/>
                             <constraint firstItem="J7p-av-q5e" firstAttribute="leading" secondItem="3Jc-Co-Y2p" secondAttribute="trailing" constant="99" id="Qm6-i8-QxM"/>
-                            <constraint firstItem="nB4-D3-V4A" firstAttribute="top" secondItem="i6W-fr-Zc0" secondAttribute="top" constant="296" id="aYq-FE-saO"/>
-                            <constraint firstItem="J7p-av-q5e" firstAttribute="top" secondItem="nB4-D3-V4A" secondAttribute="bottom" constant="32" id="oQE-cO-WWl"/>
-                            <constraint firstItem="nB4-D3-V4A" firstAttribute="leading" secondItem="i6W-fr-Zc0" secondAttribute="leading" constant="87" id="rgB-oi-e7E"/>
+                            <constraint firstItem="J7p-av-q5e" firstAttribute="top" secondItem="nB4-D3-V4A" secondAttribute="bottom" constant="32" id="Qms-tD-lTu"/>
+                            <constraint firstItem="pcg-Jr-4Q0" firstAttribute="trailing" secondItem="nB4-D3-V4A" secondAttribute="trailing" id="VYm-8B-JQf"/>
+                            <constraint firstItem="nB4-D3-V4A" firstAttribute="top" secondItem="i6W-fr-Zc0" secondAttribute="top" constant="296" id="meu-NW-fYD"/>
+                            <constraint firstItem="nB4-D3-V4A" firstAttribute="leading" secondItem="i6W-fr-Zc0" secondAttribute="leading" constant="87" id="o15-c7-wqS"/>
+                            <constraint firstItem="pcg-Jr-4Q0" firstAttribute="leading" secondItem="nB4-D3-V4A" secondAttribute="leading" id="u6V-Qk-tVx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i6W-fr-Zc0"/>
                     </view>
                     <navigationItem key="navigationItem" id="KEj-R0-KxI"/>
                     <connections>
+                        <outlet property="label" destination="pcg-Jr-4Q0" id="b9k-WU-e4f"/>
                         <outlet property="viewImage" destination="nB4-D3-V4A" id="i7o-fE-6aM"/>
                     </connections>
                 </viewController>

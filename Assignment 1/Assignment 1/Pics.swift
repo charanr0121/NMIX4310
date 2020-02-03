@@ -11,6 +11,7 @@ import UIKit
 class Pics: UIViewController {
 
     @IBOutlet weak var viewImage: UIImageView!
+    @IBOutlet var label: UILabel!
     
     var picArray:Int = 3
     var index = 0
@@ -24,6 +25,7 @@ class Pics: UIViewController {
             arrayChosen = ["gtr.jpg","porsche.jpg","benz.jpg"]
         }
         viewImage.image = UIImage(named: arrayChosen[0])
+        label.text = arrayChosen[0]
         // Do any additional setup after loading the view.
     }
     @IBAction func nextButton() {
@@ -32,6 +34,7 @@ class Pics: UIViewController {
             index = 0
         }
         viewImage.image = UIImage(named: arrayChosen[index])
+        label.text = arrayChosen[index]
     }
     @IBAction func prevButton() {
         index-=1
@@ -39,6 +42,7 @@ class Pics: UIViewController {
             index = 2
         }
         viewImage.image = UIImage(named: arrayChosen[index])
+        label.text = arrayChosen[index]
     }
     /*
     // MARK: - Navigation
