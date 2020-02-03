@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bZj-S0-YDr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assignment_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbc-NZ-wb2">
+                                <rect key="frame" x="108" y="433" width="60" height="30"/>
+                                <state key="normal" title="desserts"/>
+                                <connections>
+                                    <segue destination="jYk-0V-ibm" kind="show" identifier="desserts" id="La9-V3-WVr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgk-b0-3QB">
+                                <rect key="frame" x="248" y="433" width="63" height="30"/>
+                                <state key="normal" title="cool cars"/>
+                                <connections>
+                                    <segue destination="jYk-0V-ibm" kind="show" identifier="cars" id="PBp-Hg-PYv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cgk-b0-3QB" secondAttribute="trailing" constant="103" id="44w-0n-Hvn"/>
+                            <constraint firstItem="rbc-NZ-wb2" firstAttribute="baseline" secondItem="Cgk-b0-3QB" secondAttribute="baseline" id="8QL-FF-2GK"/>
+                            <constraint firstItem="rbc-NZ-wb2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="FPW-LH-5Xy"/>
+                            <constraint firstItem="Cgk-b0-3QB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="anz-OQ-SyR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c3N-QQ-6Sf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="97.767857142857139"/>
+        </scene>
+        <!--Pics-->
+        <scene sceneID="Iln-at-Pum">
+            <objects>
+                <viewController id="jYk-0V-ibm" customClass="Pics" customModule="Assignment_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z5l-qR-jgi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nB4-D3-V4A">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7p-av-q5e">
+                                <rect key="frame" x="259" y="544" width="30" height="30"/>
+                                <state key="normal" title="next"/>
+                                <connections>
+                                    <action selector="nextButton" destination="jYk-0V-ibm" eventType="touchUpInside" id="aoe-4C-iCu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jc-Co-Y2p">
+                                <rect key="frame" x="129" y="544" width="31" height="30"/>
+                                <state key="normal" title="prev"/>
+                                <connections>
+                                    <action selector="prevButton" destination="jYk-0V-ibm" eventType="touchUpInside" id="QF7-fh-or3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nB4-D3-V4A" firstAttribute="centerY" secondItem="Z5l-qR-jgi" secondAttribute="centerY" id="7Fh-QZ-yHy"/>
+                            <constraint firstItem="J7p-av-q5e" firstAttribute="baseline" secondItem="3Jc-Co-Y2p" secondAttribute="baseline" id="Amd-2R-aME"/>
+                            <constraint firstItem="3Jc-Co-Y2p" firstAttribute="leading" secondItem="i6W-fr-Zc0" secondAttribute="leading" constant="129" id="Itc-0l-72q"/>
+                            <constraint firstItem="nB4-D3-V4A" firstAttribute="centerX" secondItem="Z5l-qR-jgi" secondAttribute="centerX" id="N3R-sc-Zqh"/>
+                            <constraint firstItem="J7p-av-q5e" firstAttribute="leading" secondItem="3Jc-Co-Y2p" secondAttribute="trailing" constant="99" id="Qm6-i8-QxM"/>
+                            <constraint firstItem="nB4-D3-V4A" firstAttribute="top" secondItem="i6W-fr-Zc0" secondAttribute="top" constant="296" id="aYq-FE-saO"/>
+                            <constraint firstItem="J7p-av-q5e" firstAttribute="top" secondItem="nB4-D3-V4A" secondAttribute="bottom" constant="32" id="oQE-cO-WWl"/>
+                            <constraint firstItem="nB4-D3-V4A" firstAttribute="leading" secondItem="i6W-fr-Zc0" secondAttribute="leading" constant="87" id="rgB-oi-e7E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i6W-fr-Zc0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KEj-R0-KxI"/>
+                    <connections>
+                        <outlet property="viewImage" destination="nB4-D3-V4A" id="i7o-fE-6aM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Adm-QS-IbI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1797.1014492753625" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IVn-Ts-MsW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bZj-S0-YDr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8yg-m4-hiE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="t4n-9L-gze"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AnE-bk-g9m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="PBp-Hg-PYv"/>
+    </inferredMetricsTieBreakers>
+</document>
