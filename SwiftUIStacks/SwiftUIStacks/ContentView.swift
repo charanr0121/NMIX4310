@@ -10,12 +10,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack (alignment: .leading, spacing: 20){
+        VStack (spacing: 20){
             HeaderView()
             HStack (spacing: 15){
                 PricingView(title: "Basic", price: "$9", textColor: .white, bgColor: .purple)
                 ZStack {
-                    ProView()
+                PricingView(title: "Pro", price: "$19", textColor: .black, bgColor: Color(red: 240/255, green: 240/255, blue: 240/255))
                     Text("Best for designer")
                         .font(.system(.caption, design: .rounded))
                         .fontWeight(.bold)
@@ -26,23 +26,19 @@ struct ContentView: View {
                     .offset(y: 87)
                 }
             }
-            VStack {
-                Text("Team")
-                    .font(.system(.title, design: .rounded))
-                    .fontWeight(.black)
-                    .foregroundColor(.white)
-                Text("$299")
-                    .foregroundColor(.white)
-                    .font(.system(size: 40, weight: .heavy, design: .rounded))
-                Text("per month")
-                    .foregroundColor(.white)
-                    .font(.headline)
-            }
-            .frame(minWidth: 0, maxWidth: 260, minHeight: 100)
-            .padding(40)
-            .background(Color(red: 55/255, green: 55/255, blue: 55/255))
-            .cornerRadius(10)
+            PricingView(title: "Team", price: "$299", textColor: .white, bgColor: Color(red: 62/255, green: 63/255, blue: 70/255), icon: "wand.and.rays")
+            Text("Perfect for teams with 20 members")
+                .font(.system(.caption, design: .rounded))
+                .fontWeight(.bold)
+                .foregroundColor(.white)
+            .padding(5)
+            .background(Color(red: 255/255, green: 183/255, blue: 37/355))
+            .cornerRadius(2)
+                .offset(x:0, y: -35)
+            Spacer()
+
         }
+        .padding(.horizontal)
     }
 }
 
@@ -54,13 +50,16 @@ struct ContentView_Previews: PreviewProvider {
 
 struct HeaderView: View {
     var body: some View {
-        VStack(alignment: .leading, spacing: 2) {
-            Text("Choose")
-                .font(.system(.largeTitle, design: .rounded))
-                .fontWeight(.black)
-            Text("Your Plan")
-                .font(.system(.largeTitle, design: .rounded))
-                .fontWeight(.black)
+        HStack{
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Choose")
+                    .font(.system(.largeTitle, design: .rounded))
+                    .fontWeight(.black)
+                Text("Your Plan")
+                    .font(.system(.largeTitle, design: .rounded))
+                    .fontWeight(.black)
+            }
+            Spacer()
         }
     }
 }
@@ -100,6 +99,9 @@ struct ProView: View {
         .padding(40)
         .background(Color(red: 240/255, green: 240/255, blue: 240/255))
         .cornerRadius(10)
+        //.frame(minWidth: 0, maxWidth: .infinity, minHeight: 100)
+
+
     }
 }
 
