@@ -14,10 +14,10 @@ struct ContentView: View {
         VStack{
             Path { path in
                 path.move(to: CGPoint(x: 200, y: 200))
-                path.addArc(center: .init(x: 200, y: 200), radius: 150, startAngle: Angle(degrees: 0.0), endAngle: Angle(degrees: 360-degrees), clockwise: true)
+                path.addArc(center: .init(x: 200, y: 200), radius: 150, startAngle: Angle(degrees: 0.0), endAngle: Angle(degrees: degrees), clockwise: false)
             }
                 .fill(Color.green)
-            Slider(value: $degrees, in: 0...359, step: 1.0)
+            Slider(value: $degrees, in: 0...360, step: 1.0)
                 .padding()
             Text(String(Int(degrees)))
         }
